@@ -40,8 +40,11 @@ EXPAT_BUILD() {
 }
 
 C_ARES_BUILD() {
+    echo "hqmhqmhqm--------------667"
     mkdir -p $BUILD_DIR/c-ares && cd $BUILD_DIR/c-ares
+    echo "hqmhqmhqm--------------668"
     curl -Ls -o - "$C_ARES" | tar zxvf - --strip-components=1
+    echo "hqmhqmhqm--------------669"
     ./configure \
         --host=$HOST \
         --build=$(dpkg-architecture -qDEB_BUILD_GNU_TYPE) \
@@ -49,8 +52,11 @@ C_ARES_BUILD() {
         --enable-static \
         --disable-shared \
         --disable-tests
+    echo "hqmhqmhqm--------------670"
     make -j$(nproc)
+    echo "hqmhqmhqm--------------671"
     make install
+    echo "hqmhqmhqm--------------672"
 }
 
 OPENSSL_BUILD() {
