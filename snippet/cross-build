@@ -20,7 +20,9 @@ ZLIB_BUILD() {
 
 EXPAT_BUILD() {
     mkdir -p $BUILD_DIR/expat && cd $BUILD_DIR/expat
+    echo "hqmhqmhqm--------------111"
     curl -Ls -o - "$EXPAT" | tar jxvf - --strip-components=1
+    echo "hqmhqmhqm--------------222"
     ./configure \
         --host=$HOST \
         --build=$(dpkg-architecture -qDEB_BUILD_GNU_TYPE) \
@@ -30,8 +32,11 @@ EXPAT_BUILD() {
         --without-examples \
         --without-tests \
         --without-docbook
+    echo "hqmhqmhqm--------------333"
     make -j$(nproc)
+    echo "hqmhqmhqm--------------444"
     make install
+    echo "hqmhqmhqm--------------555"
 }
 
 C_ARES_BUILD() {
