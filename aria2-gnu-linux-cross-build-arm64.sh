@@ -70,8 +70,11 @@ source $SCRIPT_DIR/snippet/clean
 ## BUILD PROCESS ##
 TOOLCHAIN
 ZLIB_BUILD
+echo "hqmhqmhqm--------------000"
 EXPAT_BUILD
+echo "hqmhqmhqm--------------666"
 C_ARES_BUILD
+echo "hqmhqmhqm--------------777"
 OPENSSL_BUILD
 SQLITE3_BUILD
 LIBSSH2_BUILD
