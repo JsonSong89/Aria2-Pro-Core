@@ -1,5 +1,5 @@
 ZLIB='http://sourceforge.net/projects/libpng/files/zlib/1.2.11/zlib-1.2.11.tar.gz'
-EXPAT='https://github.com/libexpat/libexpat/releases/download/R_2_4_1/expat-2.4.1.tar.bz2'
+EXPAT='https://github.com/libexpat/libexpat/releases/download/R_2_6_4/expat-2.6.4.tar.bz2'
 C_ARES='https://c-ares.haxx.se/download/c-ares-1.17.2.tar.gz'
 OPENSSL='https://www.openssl.org/source/openssl-1.1.1l.tar.gz'
 SQLITE3='https://www.sqlite.org/2021/sqlite-autoconf-3360000.tar.gz'
