@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        PLATFORMS: [amd64, arm64]
+        PLATFORMS: [amd64, arm64, armhf, i386]
         include:
         - PLATFORMS: amd64
           BUILDER_IMAGE: debian:11
@@ -32,6 +32,12 @@ jobs:
         - PLATFORMS: arm64
           BUILDER_IMAGE: debian:11
           BUILD_SCRIPT: aria2-gnu-linux-cross-build-arm64.sh
+        - PLATFORMS: armhf
+          BUILDER_IMAGE: ubuntu:16.04
+          BUILD_SCRIPT: aria2-gnu-linux-cross-build-armhf.sh
+        - PLATFORMS: i386
+          BUILDER_IMAGE: debian:10
+          BUILD_SCRIPT: aria2-gnu-linux-cross-build-i386.sh
 
     steps:
 
@@ -39,7 +45,7 @@ jobs:
       run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Build
       env:
